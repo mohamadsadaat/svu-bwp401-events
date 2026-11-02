@@ -1,160 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="اطلع على تفاصيل الفعالية وموعدها ومكانها وجدول أعمالها، وأضفها إلى التقويم وشارك رابطها وجرّب حجز مقعد.">
-  <meta name="keywords" content="الجامعة الافتراضية، فعاليات جامعية، أنشطة طلابية، ثقافة، رياضة، تكنولوجيا، ورش عمل، BWP401">
-  <meta name="author" content="فريق مشروع BWP401 — دليل فعاليات الجامعة الافتراضية">
-  <meta name="theme-color" content="#1A365D">
-<title>تفاصيل الفعالية | دليل فعاليات الجامعة الافتراضية</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="assets/css/styles.css" rel="stylesheet">
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-</script>
-  <script defer src="assets/js/main.js">
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل فعاليات دمشق | تفاصيل الفعالية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body data-page="event">
-<a class="skip-link" href="#main">انتقل إلى المحتوى</a>
-<div class="topbar">
-<div class="container d-flex justify-content-between">
-<span>مساحة تجمعنا. تجارب تلهمنا.</span>
-<span>مشروع BWP401 <span class="ms-2">●</span> الفصل الجامعي 2026</span>
-</div>
-</div>
-<header class="site-header">
-<nav class="navbar navbar-expand-lg container" aria-label="التنقل الرئيسي">
-  <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-<span class="brand-mark" aria-hidden="true">ف</span>
-<span>دليل الفعاليات<small>الجامعة الافتراضية</small>
-</span>
-</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="فتح القائمة">
-<span class="navbar-toggler-icon">
-</span>
-</button>
-  <div class="collapse navbar-collapse" id="navigation">
-<ul class="navbar-nav mx-auto gap-lg-2">
-<li class="nav-item">
-<a class="nav-link "  href="index.html">الرئيسية</a>
-</li>
-<li class="nav-item">
-<a class="nav-link "  href="events.html">الفعاليات</a>
-</li>
-<li class="nav-item">
-<a class="nav-link active" aria-current="page" href="event.html">تفاصيل الفعالية</a>
-</li>
-<li class="nav-item">
-<a class="nav-link "  href="about.html">عن الدليل</a>
-</li>
-<li class="nav-item">
-<a class="nav-link "  href="contact.html">اتصل بنا</a>
-</li>
-</ul>
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">☾ <span>الوضع الليلي</span>
-</button>
-</div>
-</nav>
-</header>
-<main id="main">
-<div class="container section-space">
-<nav aria-label="مسار التنقل">
-<ol class="breadcrumb">
-<li class="breadcrumb-item">
-<a href="index.html">الرئيسية</a>
-</li>
-<li class="breadcrumb-item">
-<a href="events.html">الفعاليات</a>
-</li>
-<li class="breadcrumb-item active" aria-current="page">تفاصيل الفعالية</li>
-</ol>
-</nav>
-<div id="event-detail">
-<h1 class="detail-title">تفاصيل الفعالية</h1>
-<p class="muted">موعد الفعالية ومكانها وجدول أعمالها وخيارات المشاركة والحجز.</p>
-</div>
-<div id="event-alert" class="mt-3" aria-live="polite">
-</div>
-<section class="mt-5">
-<div class="section-heading">
-<div>
-<span class="eyebrow">استمر في الاكتشاف</span>
-<h2>فعاليات ذات صلة</h2>
-</div>
-<a href="events.html">عرض الكل ←</a>
-</div>
-<div id="related-events" class="row g-4">
-</div>
-</section>
-</div>
-<div class="modal fade" id="booking-modal" tabindex="-1" aria-labelledby="booking-title" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-<div class="modal-header">
-<h2 class="modal-title fs-5" id="booking-title">احجز مقعدك</h2>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق">
-</button>
-</div>
-<form id="booking-form" novalidate>
-<div class="modal-body">
-<p id="booking-event-name" class="fw-bold">
-</p>
-<p class="small muted">حجز تجريبي لأغراض المشروع؛ لا يتم إرسال بياناتك أو تسجيل حجز حقيقي.</p>
-<div id="booking-alert" aria-live="polite">
-</div>
-<label for="booking-name" class="form-label">الاسم الثلاثي</label>
-<input id="booking-name" class="form-control mb-3" autocomplete="name" required maxlength="100">
-<label for="booking-email" class="form-label">البريد الإلكتروني</label>
-<input type="email" id="booking-email" class="form-control mb-3" autocomplete="email" dir="ltr" required maxlength="150">
-<label for="booking-seats" class="form-label">عدد المقاعد</label>
-<select id="booking-seats" class="form-select">
-<option value="1">مقعد واحد</option>
-<option value="2">مقعدان</option>
-<option value="3">3 مقاعد</option>
-</select>
-</div>
-<div class="modal-footer">
-<button type="submit" class="btn btn-primary">تأكيد الحجز التجريبي</button>
-<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">إلغاء</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<noscript>
-<div class="container alert alert-warning my-4">يرجى تفعيل JavaScript لعرض الفعاليات واستخدام البحث والحجز والنماذج.</div>
-</noscript>
-</main>
-<footer class="site-footer">
-<div class="container">
-<div class="row g-4">
-<div class="col-lg-5">
-<a href="index.html" class="footer-brand">دليل فعاليات الجامعة الافتراضية</a>
-<p class="mt-3">الحياة الجامعية أكثر من محاضرة.<br>اكتشف شغفك، شارك معرفتك، واصنع ذكرياتك.</p>
-<span class="footer-note">مشروع طلابي تعليمي · BWP401 · ليس موقعاً رسمياً للجامعة</span>
-</div>
-<div class="col-6 col-lg-3">
-<h2 class="h6">روابط سريعة</h2>
-<a href="events.html">اكتشف الفعاليات</a>
-<a href="about.html">الفريق وسياسات النشر</a>
-<a href="contact.html">تواصل معنا</a>
-</div>
-<div class="col-6 col-lg-4">
-<h2 class="h6">نبقى على تواصل</h2>
-<a href="mailto:info@svuonline.org">info@svuonline.org</a>
-<a href="https://svuonline.org" target="_blank" rel="noopener noreferrer">موقع الجامعة ↗</a>
-<div class="d-flex gap-3 mt-2">
-<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="منصة فيسبوك، رابط عام">Facebook ↗</a>
-<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="منصة إنستغرام، رابط عام">Instagram ↗</a>
-</div>
-<small>روابط المنصات عامة؛ تُستبدل بحسابات الفريق.</small>
-</div>
-</div>
-<div class="footer-bottom">© <span id="year">2026</span> دليل فعاليات الجامعة الافتراضية. جميع الحقوق محفوظة.<span>صُنع بشغف، لطلاب الجامعة.</span>
-</div>
-</div>
-</footer>
-<button id="scroll-top" class="scroll-top" type="button" aria-label="العودة إلى أعلى الصفحة" hidden>↑</button>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    دليل فعاليات دمشق
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="event.html">تفاصيل الفعالية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                    <button id="darkModeBtn" class="btn btn-outline-light btn-sm ms-lg-3">الوضع الليلي</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-4">
+        <div class="container">
+            <div id="eventActionAlert" class="alert alert-success d-none mb-3" role="alert"></div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm p-4">
+                        <div class="mb-2">
+                            <span id="detailBadge" class="badge bg-primary fs-6">موسيقى</span>
+                        </div>
+                        <h1 id="detailTitle" class="fw-bold mb-3">حفل الفرقة السيمفونية الوطنية</h1>
+
+                        <div class="d-flex flex-wrap gap-3 text-muted mb-3 pb-3 border-bottom">
+                            <span id="detailDate">التاريخ: الجمعة 20 تشرين الثاني 2026 - الساعة 7:00 مساءً</span>
+                            <span id="detailLocation">المكان: دار الأسد للثقافة والفنون (الأوبرا) - ساحة الأمويين</span>
+                        </div>
+
+                        <img id="detailMainImg" src="images/40.jpg" class="img-fluid rounded mb-4 detail-banner-img" alt="صورة الفعالية الرئيسية">
+
+                        <h4 class="fw-bold mb-2">حول الفعالية</h4>
+                        <p id="detailDesc" class="lead fs-6">
+                            تقدم الفرقة السيمفونية الوطنية أمسية موسيقية خاصة تتضمن مجموعة من المؤلفات الشرقية والكلاسيكية العالمية، بمشاركة أساتذة وطلاب المعهد العالي للموسيقى بدمشق.
+                        </p>
+                        <p>
+                            ينقسم برنامج الحفل إلى فقرتين مع استراحة قصيرة مدتها خمس عشرة دقيقة. تفتح الأبواب للحضور قبل نصف ساعة من بدء العرض، ويرجى الالتزام بالحجز المسبق لضمان توافر المقاعد.
+                        </p>
+
+                        <h5 class="fw-bold mt-4 mb-3">صور من الفعاليات السابقة</h5>
+                        <div class="row g-2 mb-4">
+                            <div class="col-4">
+                                <img src="images/20.jpg" class="img-fluid rounded gallery-thumb" alt="صورة عرض سابق 1">
+                            </div>
+                            <div class="col-4">
+                                <img src="images/50.jpg" class="img-fluid rounded gallery-thumb" alt="صورة عرض سابق 2">
+                            </div>
+                            <div class="col-4">
+                                <img src="images/30.jpg" class="img-fluid rounded gallery-thumb" alt="صورة عرض سابق 3">
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2 pt-3 border-top">
+                            <button id="addToCalendarBtn" class="btn btn-outline-primary">إضافة إلى التقويم</button>
+                            <button id="shareEventBtn" class="btn btn-outline-secondary">نسخ رابط الفعالية</button>
+                            <button class="btn btn-success me-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                حجز مقعد في الفعالية
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card shadow-sm p-3 mb-4">
+                        <h5 class="fw-bold mb-3">موقع الفعالية على الخريطة</h5>
+                        <img src="images/100.jpg" class="img-fluid rounded border mb-2" alt="خريطة موقع الفعالية في دمشق">
+                        <p class="small text-muted mb-0">دمشق - ساحة الأمويين - جانب مكتبة الأسد الوطنية.</p>
+                    </div>
+
+                    <div class="card shadow-sm p-3">
+                        <h5 class="fw-bold mb-3">فعاليات أخرى قد تهمك</h5>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-3 border-bottom pb-2">
+                                <img src="images/50.jpg" width="70" height="55" class="rounded object-fit-cover" alt="معرض الخريف">
+                                <div>
+                                    <h6 class="mb-1 fw-bold"><a href="event.html?id=2" class="text-decoration-none">معرض الخريف التشكيلي</a></h6>
+                                    <small class="text-muted">24 تشرين الثاني 2026 | ثقافة</small>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 border-bottom pb-2">
+                                <img src="images/90.jpg" width="70" height="55" class="rounded object-fit-cover" alt="معرض الكتب">
+                                <div>
+                                    <h6 class="mb-1 fw-bold"><a href="event.html?id=6" class="text-decoration-none">معرض تبادل الكتب الجامعية</a></h6>
+                                    <small class="text-muted">10 كانون الأول 2026 | ثقافة</small>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images/70.jpg" width="70" height="55" class="rounded object-fit-cover" alt="مهرجان تشرين">
+                                <div>
+                                    <h6 class="mb-1 fw-bold"><a href="event.html?id=4" class="text-decoration-none">مهرجان العائلة والطفل</a></h6>
+                                    <small class="text-muted">2 كانون الأول 2026 | عائلي</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- نافذة حجز المقعد المنبثقة -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">تسجيل حضور في الفعالية</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="bookName" class="form-label">الاسم الثلاثي:</label>
+                            <input type="text" id="bookName" class="form-control" required placeholder="أدخل اسمك الكامل">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookSeats" class="form-label">عدد البطاقات المطلوبة:</label>
+                            <select id="bookSeats" class="form-select">
+                                <option value="1">بطاقة واحدة</option>
+                                <option value="2">بطاقتان</option>
+                                <option value="3">3 بطاقات</option>
+                            </select>
+                        </div>
+                        <div id="bookingResultAlert" class="alert alert-success d-none"></div>
+                        <button type="submit" class="btn btn-primary w-100">تأكيد الحجز</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollTopBtn" title="العودة للأعلى">↑</button>
+
+    <footer class="custom-footer text-light py-4 mt-5">
+        <div class="container text-center small">
+            جميع الحقوق محفوظة &copy; 2026 - دليل فعاليات دمشق | مقرر BWP401 - الجامعة الافتراضية السورية
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

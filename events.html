@@ -1,143 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="تصفح فعاليات الجامعة الافتراضية وابحث بالاسم والتصنيف والتاريخ عن الأنشطة التقنية والثقافية والرياضية والموسيقية والأكاديمية.">
-  <meta name="keywords" content="الجامعة الافتراضية، فعاليات جامعية، أنشطة طلابية، ثقافة، رياضة، تكنولوجيا، ورش عمل، BWP401">
-  <meta name="author" content="فريق مشروع BWP401 — دليل فعاليات الجامعة الافتراضية">
-  <meta name="theme-color" content="#1A365D">
-<title>كل الفعاليات | دليل فعاليات الجامعة الافتراضية</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="assets/css/styles.css" rel="stylesheet">
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-</script>
-  <script defer src="assets/js/main.js">
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل فعاليات دمشق | كافة الفعاليات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body data-page="events">
-<a class="skip-link" href="#main">انتقل إلى المحتوى</a>
-<div class="topbar">
-<div class="container d-flex justify-content-between">
-<span>مساحة تجمعنا. تجارب تلهمنا.</span>
-<span>مشروع BWP401 <span class="ms-2">●</span> الفصل الجامعي 2026</span>
-</div>
-</div>
-<header class="site-header">
-<nav class="navbar navbar-expand-lg container" aria-label="التنقل الرئيسي">
-  <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-<span class="brand-mark" aria-hidden="true">ف</span>
-<span>دليل الفعاليات<small>الجامعة الافتراضية</small>
-</span>
-</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="فتح القائمة">
-<span class="navbar-toggler-icon">
-</span>
-</button>
-  <div class="collapse navbar-collapse" id="navigation">
-<ul class="navbar-nav mx-auto gap-lg-2">
-<li class="nav-item">
-<a class="nav-link "  href="index.html">الرئيسية</a>
-</li>
-<li class="nav-item">
-<a class="nav-link active" aria-current="page" href="events.html">الفعاليات</a>
-</li>
-<li class="nav-item">
-<a class="nav-link "  href="event.html">تفاصيل الفعالية</a>
-</li>
-<li class="nav-item">
-<a class="nav-link "  href="about.html">عن الدليل</a>
-</li>
-<li class="nav-item">
-<a class="nav-link "  href="contact.html">اتصل بنا</a>
-</li>
-</ul>
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">☾ <span>الوضع الليلي</span>
-</button>
-</div>
-</nav>
-</header>
-<main id="main">
-<section class="page-heading">
-<div class="container">
-<span class="eyebrow">اكتشف. شارك. انتمِ.</span>
-<h1>فعاليات تستحق وقتك</h1>
-<p>ابحث عن تجربتك القادمة، من أول ورشة إلى آخر نغمة.</p>
-</div>
-</section>
-<section class="container section-space pt-0" aria-label="البحث في الفعاليات">
-<form id="filter-form" class="filter-panel row g-3">
-<div class="col-lg-5">
-<label for="search" class="form-label">ابحث عن فعالية</label>
-<input type="search" id="search" class="form-control" placeholder="ما الذي ترغب في اكتشافه؟" maxlength="100">
-</div>
-<div class="col-sm-6 col-lg-3">
-<label for="category" class="form-label">التصنيف</label>
-<select id="category" class="form-select">
-<option value="">كل التصنيفات</option>ثقافة</option>
-<option>رياضة</option>
-<option>موسيقى</option>
-<option>عائلي</option>
-<option>تكنولوجيا</option>
-<option>أكاديمي</option>
-</select>
-</div>
-<div class="col-sm-6 col-lg-3">
-<label for="date" class="form-label">التاريخ</label>
-<input type="date" id="date" class="form-control">
-</div>
-<div class="col-lg-1 d-flex align-items-end">
-<button type="reset" class="btn btn-outline-primary w-100" aria-label="مسح كل الفلاتر">مسح</button>
-</div>
-</form>
-<div class="section-heading mt-5">
-<h2 class="h5">كل الفعاليات</h2>
-<span id="result-count" class="muted" role="status" aria-live="polite">
-</span>
-</div>
-<div id="events-grid" class="row g-4">
-</div>
-<div id="empty-state" class="empty-state" hidden>
-<span aria-hidden="true">⌕</span>
-<h2>لا توجد فعاليات مطابقة</h2>
-<p>جرّب اسماً مختلفاً أو امسح التصنيف والتاريخ.</p>
-<button id="clear-filters" class="btn btn-primary" type="button">عرض كل الفعاليات</button>
-</div>
-<p class="small muted mt-4">تُحفظ خيارات البحث والتصنيف والتاريخ تلقائياً على هذا المتصفح.</p>
-</section>
-<noscript>
-<div class="container alert alert-warning my-4">يرجى تفعيل JavaScript لعرض الفعاليات واستخدام البحث والحجز والنماذج.</div>
-</noscript>
-</main>
-<footer class="site-footer">
-<div class="container">
-<div class="row g-4">
-<div class="col-lg-5">
-<a href="index.html" class="footer-brand">دليل فعاليات الجامعة الافتراضية</a>
-<p class="mt-3">الحياة الجامعية أكثر من محاضرة.<br>اكتشف شغفك، شارك معرفتك، واصنع ذكرياتك.</p>
-<span class="footer-note">مشروع طلابي تعليمي · BWP401 · ليس موقعاً رسمياً للجامعة</span>
-</div>
-<div class="col-6 col-lg-3">
-<h2 class="h6">روابط سريعة</h2>
-<a href="events.html">اكتشف الفعاليات</a>
-<a href="about.html">الفريق وسياسات النشر</a>
-<a href="contact.html">تواصل معنا</a>
-</div>
-<div class="col-6 col-lg-4">
-<h2 class="h6">نبقى على تواصل</h2>
-<a href="mailto:info@svuonline.org">info@svuonline.org</a>
-<a href="https://svuonline.org" target="_blank" rel="noopener noreferrer">موقع الجامعة ↗</a>
-<div class="d-flex gap-3 mt-2">
-<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="منصة فيسبوك، رابط عام">Facebook ↗</a>
-<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="منصة إنستغرام، رابط عام">Instagram ↗</a>
-</div>
-<small>روابط المنصات عامة؛ تُستبدل بحسابات الفريق.</small>
-</div>
-</div>
-<div class="footer-bottom">© <span id="year">2026</span> دليل فعاليات الجامعة الافتراضية. جميع الحقوق محفوظة.<span>صُنع بشغف، لطلاب الجامعة.</span>
-</div>
-</div>
-</footer>
-<button id="scroll-top" class="scroll-top" type="button" aria-label="العودة إلى أعلى الصفحة" hidden>↑</button>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    دليل فعاليات دمشق
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="events.html">الفعاليات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="event.html">تفاصيل الفعالية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                    <button id="darkModeBtn" class="btn btn-outline-light btn-sm ms-lg-3">الوضع الليلي</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-4">
+        <div class="container">
+            <h1 class="section-title mb-4">جدول الفعاليات القادمة في دمشق</h1>
+
+            <!-- نموذج فلترة الفعاليات حسب النص والتصنيف والتاريخ -->
+            <div class="card shadow-sm mb-4 p-3 filter-box">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-4">
+                        <label for="searchInput" class="form-label fw-bold">البحث حسب العنوان أو المكان:</label>
+                        <input type="text" id="searchInput" class="form-control" placeholder="اكتب اسم الفعالية أو المنطقة...">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="categoryFilter" class="form-label fw-bold">التصنيف:</label>
+                        <select id="categoryFilter" class="form-select">
+                            <option value="all">جميع التصنيفات</option>
+                            <option value="ثقافة">ثقافة</option>
+                            <option value="موسيقى">موسيقى</option>
+                            <option value="رياضة">رياضة</option>
+                            <option value="عائلي">عائلي</option>
+                            <option value="تقنية">تقنية</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="dateFilter" class="form-label fw-bold">التاريخ:</label>
+                        <input type="date" id="dateFilter" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <button id="resetFiltersBtn" class="btn btn-secondary w-100">إعادة ضبط</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="eventsListContainer">
+                <div class="col-12 col-md-6 col-lg-4 event-card-wrapper" data-category="موسيقى" data-date="2026-11-20">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="images/40.jpg" class="card-img-top event-card-img" alt="حفل الفرقة السيمفونية">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-primary">موسيقى</span>
+                                <span class="small text-muted">2026-11-20</span>
+                            </div>
+                            <h5 class="card-title fw-bold">حفل الفرقة السيمفونية الوطنية</h5>
+                            <p class="small text-muted mb-2">المكان: دار الأسد للثقافة والفنون - الأمويين</p>
+                            <p class="card-text flex-grow-1">أمسية موسيقية تقدم مختارات من المؤلفات الشرقية والكلاسيكية العالمية على مسرح الأوبرا.</p>
+                            <a href="event.html?id=1" class="btn btn-primary w-100 mt-3">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 event-card-wrapper" data-category="ثقافة" data-date="2026-11-24">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="images/50.jpg" class="card-img-top event-card-img" alt="معرض الخريف التشكيلي">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-success">ثقافة</span>
+                                <span class="small text-muted">2026-11-24</span>
+                            </div>
+                            <h5 class="card-title fw-bold">معرض الخريف السنوي للفن التشكيلي</h5>
+                            <p class="small text-muted mb-2">المكان: خان أسعد باشا - دمشق القديمة</p>
+                            <p class="card-text flex-grow-1">معرض فني يجمع لوحات زيتية ومائية توثق معالم دمشق التاريخية بمشاركة فنانين شباب.</p>
+                            <a href="event.html?id=2" class="btn btn-primary w-100 mt-3">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 event-card-wrapper" data-category="رياضة" data-date="2026-11-27">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="images/60.jpg" class="card-img-top event-card-img" alt="سباق دمشق للجري">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-warning text-dark">رياضة</span>
+                                <span class="small text-muted">2026-11-27</span>
+                            </div>
+                            <h5 class="card-title fw-bold">سباق دمشق الودي للجري</h5>
+                            <p class="small text-muted mb-2">المكان: مدينة الجلاء الرياضية - المزة</p>
+                            <p class="card-text flex-grow-1">نشاط رياضي صباحي للجري لمسافة 5 كم مع توزيع شهادات مشاركة وميداليات للمراكز الأولى.</p>
+                            <a href="event.html?id=3" class="btn btn-primary w-100 mt-3">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 event-card-wrapper" data-category="عائلي" data-date="2026-12-02">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="images/70.jpg" class="card-img-top event-card-img" alt="مهرجان العائلة والطفل">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-info text-dark">عائلي</span>
+                                <span class="small text-muted">2026-12-02</span>
+                            </div>
+                            <h5 class="card-title fw-bold">مهرجان العائلة والطفل الترفيهي</h5>
+                            <p class="small text-muted mb-2">المكان: حديقة تشرين - البرامكة</p>
+                            <p class="card-text flex-grow-1">يوم مفتوح للعائلات يتضمن أنشطة رسم للأطفال وعروض مسرحية وأجنحة للمشغولات اليدوية.</p>
+                            <a href="event.html?id=4" class="btn btn-primary w-100 mt-3">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 event-card-wrapper" data-category="تقنية" data-date="2026-12-05">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="images/80.jpg" class="card-img-top event-card-img" alt="مسابقة البرمجة الجامعية">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-secondary">تقنية</span>
+                                <span class="small text-muted">2026-12-05</span>
+                            </div>
+                            <h5 class="card-title fw-bold">مسابقة البرمجة الجامعية وتصميم الويب</h5>
+                            <p class="small text-muted mb-2">المكان: كلية الهندسة المعلوماتية - جامعة دمشق</p>
+                            <p class="card-text flex-grow-1">منافسة برمجية لطلاب الجامعات السورية لتطوير مشاريع ويب تخدم قطاع التعليم والخدمات العامة.</p>
+                            <a href="event.html?id=5" class="btn btn-primary w-100 mt-3">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 event-card-wrapper" data-category="ثقافة" data-date="2026-12-10">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="images/90.jpg" class="card-img-top event-card-img" alt="معرض تبادل الكتب">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-success">ثقافة</span>
+                                <span class="small text-muted">2026-12-10</span>
+                            </div>
+                            <h5 class="card-title fw-bold">معرض تبادل الكتب والمراجع الجامعية</h5>
+                            <p class="small text-muted mb-2">المكان: المركز الثقافي العربي - أبو رمانة</p>
+                            <p class="card-text flex-grow-1">فعالية ثقافية لتبادل الكتب والروايات والمراجع الدراسية بأسعار رمزية مع جلسات نقاش مفتوحة.</p>
+                            <a href="event.html?id=6" class="btn btn-primary w-100 mt-3">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="noEventsMsg" class="alert alert-warning text-center mt-4 d-none">
+                لا توجد فعاليات مطابقة لخيارات البحث المحددة. يرجى تغيير التصنيف أو إعادة ضبط الفلتر.
+            </div>
+        </div>
+    </main>
+
+    <button id="scrollTopBtn" title="العودة للأعلى">↑</button>
+
+    <footer class="custom-footer text-light py-4 mt-5">
+        <div class="container text-center small">
+            جميع الحقوق محفوظة &copy; 2026 - دليل فعاليات دمشق | مقرر BWP401 - الجامعة الافتراضية السورية
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
